@@ -1,0 +1,31 @@
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+
+/* ==========================================================================
+   1. This file needs to be replaced after core.css so open sans light woff can 
+   	  be replaced.
+   2. When javascript detects the windows NT 6.1 and 6.2, it would add this file
+      to header and replace orignal fontello.css so it won't breake hinting.
+	  Search navigator.userAgent in newjs.js for the code
+   ========================================================================== */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'os_l';
+    src: url("/fonts/opensans/OpenSans-Light-webfont.svg#open_sanslight") format("svg");
+  }
+}
+/*
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'os_r';
+    src: url("/fonts/opensans/OpenSans-Regular-webfont.svg#open_sansregular") format("svg");
+  }
+}
+*/
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('/fonts/fontello/fontello.svg?74491464#fontello') format('svg');
+  }
+}
