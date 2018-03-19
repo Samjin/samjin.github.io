@@ -1,0 +1,307 @@
+/*!
+ * animate.css -http://daneden.me/animate
+ * Version - 3.5.2
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2017 Daniel Eden
+ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+}
+
+
+@keyframes fadeOutBackground {
+  from {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1000;
+  }
+
+  to {
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.fadeOutBackground {
+  animation-name: fadeOutBackground;
+}
+
+// For section intro transition
+@keyframes fadeOutForIntro {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    display: none;
+    transform: translate3d(-300px, 0, 0);
+  }
+}
+
+.fadeOutForIntro {
+  animation-name: fadeOutForIntro;
+}
+
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0);
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+
+@keyframes fadeInRightBig {
+  from {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInRightBig {
+  animation-name: fadeInRightBig;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+
+/* Form animation
+-------------------------------------------------------- */
+@keyframes shrink-bounce {
+  0% {
+    transform: scale(1);
+  }
+
+  33% {
+    transform: scale(0.85);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+@keyframes shrink-bounce-reverse {
+  0% {
+    transform: scale(0.5);
+  }
+
+  33% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes checkbox-check {
+  0% {
+    width: 0;
+    height: 0;
+    border-color: #fff;
+    transform: translate3d(0, 0, 0) rotate(45deg);
+  }
+
+  33% {
+    width: 0.2em;
+    height: 0;
+    transform: translate3d(0, 0, 0) rotate(45deg);
+  }
+
+  100% {
+    width: 0.4em;
+    height: 0.7em;
+    border-color: #fff;
+    transform: translate3d(0, -0.5em, 0) rotate(45deg);
+  }
+}
+
+
+// loader spinner
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); 
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); 
+  } 
+}
+
+
+@keyframes bounce {
+  0%,
+  100%,
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+}
+
+
+// .slide-up {
+//     overflow: hidden;
+//     max-height: 0;
+//     padding-top: 0;
+//     padding-bottom: 0;
+//     margin-top: 0;
+//     margin-bottom: 0;
+//     -moz-transition-duration: 0.3s;
+//     -webkit-transition-duration: 0.3s;
+//     -o-transition-duration: 0.3s;
+//     transition-duration: 0.3s;
+//     -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+//     -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+//     -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+//     transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+// }
+// .slide-down {
+//     -moz-transition-duration: 0.3s;
+//     -webkit-transition-duration: 0.3s;
+//     -o-transition-duration: 0.3s;
+//     transition-duration: 0.3s;
+//     -moz-transition-timing-function: ease-in;
+//     -webkit-transition-timing-function: ease-in;
+//     -o-transition-timing-function: ease-in;
+//     transition-timing-function: ease-in;
+//     max-height: 1000px;
+//     overflow: hidden;
+// }
+
+
+/* Modifier
+-------------------------------------------------------- */
+.no-animate {
+  transition: none !important;
+}
+
+.animated {
+  animation-duration: 0.25s;
+  animation-fill-mode: both;
+  &--100ms { animation-duration: 100ms}
+  &--400ms { animation-duration: 400ms}
+  &--800ms { animation-duration: 800ms}
+  &--1500ms { animation-duration: 1500ms}
+}
+
+.delay {
+  &-50ms   {animation-delay: 50ms;}
+  &-100ms  {animation-delay: 100ms;}
+  &-800ms  {animation-delay: 800ms;}
+  &-2000ms  {animation-delay: 2000ms;}
+  &-4000ms {animation-delay: 4000ms;}
+  &-4500ms {animation-delay: 4500ms;}
+  &-5000ms {animation-delay: 5000ms;}
+  &-6000ms {animation-delay: 6000ms;}
+  &-7000ms {animation-delay: 7000ms;}
+}

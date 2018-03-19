@@ -1,0 +1,32 @@
+// Update $global-font-size in __unit.scss if your html's base font size is not 16px
+h1 {
+    font-size: rem-calc( 35 );
+    font-weight: $font-700;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: rem-calc( 35 );
+    font-weight: $font-400;
+    line-height: 1.2;
+
+    @include breakpoint(sm down) {
+        font-size: rem-calc( 30 );
+    }
+}
+
+h3 {
+   font-size: rem-calc( 30 );
+}
+
+h4 {
+    font-size: rem-calc( 20 );
+}
+
+h5 {
+    font-size: rem-calc( 18 );
+}
+
+p {
+    margin: 15px 0;
+}

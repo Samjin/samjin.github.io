@@ -1,0 +1,66 @@
+*:not(img),
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    font: 18px/1.4 $font-body;
+    color: $color-default;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    
+    // For screen size smaller than iphone6
+    @include breakpoint(sm down) {
+        font-size: 97%;
+    }
+}
+
+a {
+    color: $color-blue;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: underline;
+    }
+
+    &:focus {
+        outline: 2px dotted $border-grey-3;
+    }
+}
+
+b {
+    font-weight: $font-600;
+}
+
+strong {
+    font-weight: $font-700;
+}
+
+em {
+    font-style: italic;
+}
+
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $font-body;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+[class^="col"] {
+    transition: all 0.25s linear;
+}

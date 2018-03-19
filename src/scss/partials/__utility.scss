@@ -1,0 +1,177 @@
+/* ul
+-------------------------------------------------------- */
+.u-ul-clean {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+/* '>' icon added after hyper link
+-------------------------------------------------------- */
+.u-has-caret { //Extend by button and anchor
+  &:after {
+    font-family: 'DEM';
+    font-size: 70%;
+    margin-left: 4px;
+    content: "\e238";
+    pointer-events: none; // makes element ignored by click event letting you click behind it
+    vertical-align: middle;
+    display: inline-block;
+  }
+}
+
+/* Font utility
+-------------------------------------------------------- */
+.u-color-white {
+  color: #fff !important;
+}
+
+.u-color-blue {
+  color: $color-blue !important;
+}
+
+.u-color-default {
+  color: $color-default !important;
+}
+
+/* Font style
+-------------------------------------------------------- */
+.u-font-bold {
+  font-weight: $font-600;
+}
+
+
+/* link
+-------------------------------------------------------- */
+.u-link-stealth {
+  color: $color-default;
+  display: inline-block;
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+.u-link-underline {
+  text-decoration: none !important;
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
+
+/* Image
+-------------------------------------------------------- */
+// Responsive and stretch to fullsize image
+.u-img-full {
+  width: 100%;
+  display: block;
+}
+
+// Responsive image but not full size
+.u-child-img-responsive img,
+.u-img-responsive {
+   display: block;
+   margin: 0;
+   max-width: 100%;
+   height: auto;
+}
+
+.u-bg-cover {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.u-bg-blue {
+  background-color: $bg-blue-1;
+}
+
+.u-bg-grey {
+  background-color: $bg-grey-2;
+}
+
+.u-bg-grey-dark {
+  background-color: $bg-grey-3;
+}
+
+
+/* Text alignment
+-------------------------------------------------------- */
+.u-text-left { text-align: left; }
+.u-text-right { text-align: right; }
+.u-text-center { text-align: center; }
+
+
+/* Float alignment
+-------------------------------------------------------- */
+.u-float-left { 
+  float: left !important;
+}
+.u-float-right { 
+  float: right !important;
+}
+
+
+/* Absolute center, used directly in html
+-------------------------------------------------------- */
+.u-abs-center           { @include vertical-center; @include horizontal-center; }
+.u-abs-ver-center       { @include vertical-center; }
+
+
+/* Static center
+-------------------------------------------------------- */
+// parents div must have height
+.u-static-ver-center    { @include vertical-align;  }
+.u-static-ver-bottom    { @include vertical-align(bottom);  }
+
+
+/* Layout utilities.
+-------------------------------------------------------- */
+// For container of floated items
+.clearfix {
+  @include clearfix;
+}
+
+// For floated item itself
+.clear {
+  clear: both;
+}
+
+// can't use these class with .container or row
+.u-ver-space-sm {
+  padding: rem-calc( 30px 0 );
+  @include breakpoint(md down) {
+    padding: rem-calc( 25px 0 );
+  }
+}
+
+.u-ver-space-md {
+  padding: rem-calc( 60px 0 );
+  @include breakpoint(md down) {
+    padding: rem-calc( 30px 0 );
+  }
+}
+
+.u-ver-space-lg {
+  padding: rem-calc( 80px 0 );
+  @include breakpoint(md down) {
+    padding: rem-calc( 50px 0 );
+  }
+}
+
+
+
+/* accessibility hidden
+-------------------------------------------------------- */
+.access-hidden {
+  position: absolute;
+  left: -10000px;
+  color: #fff !important;
+  background-color: #000 !important;
+  font-weight: bold;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
