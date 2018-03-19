@@ -1,20 +1,22 @@
 <template>
   <div class="home">
-    <Header msg="Shan(Sam) Jin's Portfolio"/>
+    <div class="container">
+      <Header msg="Shan(Sam) Jin's Portfolio"/>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Header from '@/components/Header.vue'
-import Work from '@/components/Work.vue'
+import Works from '@/components/Works.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'home',
   components: {
     Header,
-    Work,
+    Works,
     Footer
   }
 }

@@ -1,16 +1,30 @@
 <template>
-  <div class="row">
-    <div class="col-12 col-sm-6">This is uploader view</div>
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-6">
+        <div type="" id="progress">Upload</div>
+        <button type="" id="uploader" >Upload</button>
+    </div>
   </div>
 </template>
 
 <script>
 
-const uploader = document.getElementById('uploader')
+/*Get elements*/
+// const uploader = document.getElementById('progress')
+// const fileBtn = document.getElementById('fileBtn')
+
+// Bind change event to template 
+// Get file
+// Create a stroage ref: .ref('folder_name/file.name')
+// Upload file: var task = storageRef.put(file)
+// Update progress bar
 
 export default {
   name: 'Uploader',
-  props: {}
+  props: {},
+  progress: function () {    
+    
+  }
 }
 </script>
 

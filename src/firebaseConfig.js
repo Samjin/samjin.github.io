@@ -10,4 +10,12 @@ const fb_config = {
   messagingSenderId: "266683601941"
 };
 
+// Original rule
+// service firebase.storage {
+//   match /b/{bucket}/o {
+//     match /{allPaths=**} {
+//       allow read, write: if request.auth != null;
+//     }
+//   }
+// }
 export const firebaseApp = firebase.initializeApp(fb_config)

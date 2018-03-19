@@ -6,12 +6,15 @@ import style from './scss/app.scss'
 
 Vue.config.productionTip = false
 
-const storageRef = firebaseApp.storage().ref();
+const storageRef = firebaseApp.storage().ref('desktop-images/20dollar.jpg');
+console.log(storageRef);
+
 // storageRef.child("").put(data).then(function(snapshot) {
 //     console.log();
 // });
+
+
 new Vue({
   router,
-  style,
   render: h => h(App)
 }).$mount('#app')
